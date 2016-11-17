@@ -1,0 +1,29 @@
+<!-- This is a new xbot cruise program modified by Rocwang. -->
+<launch>
+	<!-- launch xbot_bringup -->
+	<include file="$(find xbot_bringup)/launch/xbot_minimal.launch">
+	</include>
+
+	<node pkg='xbot_face_track' name='map2odom_tf' type='map2odom_tf.py'/>
+
+	<!-- gmapping -->
+	<!-- include file="$(find xbot_face_track)/launch/include/gmapping.launch">
+	</include -->
+
+
+
+
+	<!-- launch follow face if there is face detected -->
+	<node name="follow_face" pkg="xbot_face_track" type="follow_face.py"/>
+
+	<!-- Detect face -->
+	<node name="face_detect" pkg="xbot_face_track" type="face_detect.py"/>
+
+	<!-- launch RVIZ -->
+	<!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find xbot_face_track)/rviz/mapping_follow.rviz" / -->
+
+
+
+
+</launch>
+

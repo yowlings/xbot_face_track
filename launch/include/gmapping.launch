@@ -1,0 +1,11 @@
+<launch>
+	<arg name="scan" default="scan" />
+
+	<node name="gmapping" pkg="gmapping" type="slam_gmapping">
+		<param name="map_update_interval" value="2.0"/>
+	</node>
+
+
+
+
+</launch>
