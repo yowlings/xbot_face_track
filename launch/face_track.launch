@@ -18,7 +18,7 @@
 
 	<!-- Detect face -->
 	<node name="face_detect" pkg="xbot_face_track" type="face_detect.py">
-		<param name = "cascPath" value = "/home/roc/ros_indigo_ws/src/wang_works/xbot_face_track/scripts/haarcascade_frontalface_default.xml"/>
+		<param name = "cascPath" value = "$(find xbot_face_track)/scripts/haarcascade_frontalface_default.xml"/>
 	</node>
 
 	<!-- launch RVIZ -->
