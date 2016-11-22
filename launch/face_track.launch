@@ -17,10 +17,12 @@
 	<node name="follow_face" pkg="xbot_face_track" type="follow_face.py"/>
 
 	<!-- Detect face -->
-	<node name="face_detect" pkg="xbot_face_track" type="face_detect.py"/>
+	<node name="face_detect" pkg="xbot_face_track" type="face_detect.py">
+		<param name = "cascPath" value = "/home/roc/ros_indigo_ws/src/wang_works/xbot_face_track/scripts/haarcascade_frontalface_default.xml"/>
+	</node>
 
 	<!-- launch RVIZ -->
-	<!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find xbot_face_track)/rviz/mapping_follow.rviz" / -->
+	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find xbot_face_track)/rviz/mapping_follow.rviz" /> -->
 
 
 
